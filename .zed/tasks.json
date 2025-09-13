@@ -1,0 +1,8 @@
+[
+  {
+    "label": "Run file on lego hub",
+    "command": "pybricksdev",
+    "args": ["run", "ble", "${ZED_FILE}", "--no-start", "--stay-connected"],
+    "reveal": "always"
+  }
+]
