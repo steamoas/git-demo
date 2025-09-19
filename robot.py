@@ -4,7 +4,6 @@ from pybricks.pupdevices import Motor, ColorSensor
 from pybricks.parameters import Button, Port, Direction
 
 hub = PrimeHub()
-hub.system.set_stop_button((Button.LEFT, Button.RIGHT))
 #Adjust these parameters to fit your robot. Also ensure that you add any sensors here.
 
 left_drive = Motor(Port.C, Direction.COUNTERCLOCKWISE)
