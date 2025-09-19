@@ -8,6 +8,16 @@ from pybricks.tools import wait, run_task
 #configure args at the bottom of the file
 
 def track_movement(drive_base: DriveBase, hub: PrimeHub, drive_base_name: str = "drive_base", rounding_digits: int = 1, stop_type: Stop = Stop.HOLD):
+    """
+    Allows you to track the drive base's movement changes when manually moving your robot. Can also generate python code to replicate these movements using the same drive base.
+
+   Args:
+      drive_base (DriveBase): The drive base that you want to use when tracking movement.
+      hub (PrimeHub): An instance of your robot's hub. Required for interfacing with buttons.
+      drive_base_name (str): The name of the drive base that you want the code generator to use. Defaults to "drive_base".
+      rounding_digits (int): The amount of decimal precision you want when generating turning instructions. Defaults to 1.
+      stop_type (Stop): The stopping instruction you want to use for generated python code. Defaults to Stop.HOLD.
+    """
     hub.light.on(Color.GREEN)
     hub.system.set_stop_button((Button.LEFT, Button.RIGHT))
     drive_base.use_gyro(True)
