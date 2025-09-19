@@ -39,7 +39,7 @@ class ProgramSwitcher:
                 if self.setup_function:
                     self.setup_function()
 
-                self.program_list[current_run]()
+                run_task(self.program_list[current_run]())
 
             else:
                 wait(wait_time_ms)
