@@ -9,4 +9,4 @@ hub = PrimeHub()
 left_drive = Motor(Port.C, Direction.COUNTERCLOCKWISE)
 right_drive = Motor(Port.A, Direction.CLOCKWISE)
 
-drive_base = DriveBase(left_drive, right_drive, 50, 100)
+drive = DriveBase(left_drive, right_drive, 50, 100)
