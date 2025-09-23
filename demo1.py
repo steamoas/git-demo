@@ -1,0 +1,10 @@
+from robot import drive, left_drive, right_drive
+drive.straight(750)
+drive.turn(90)
+drive.straight(750)
+drive.turn(90)
+drive.straight(500)
+drive.turn(90)
+drive.straight(-750)
+drive.turn(-90)
+drive.straight(200)

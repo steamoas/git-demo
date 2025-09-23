@@ -1,5 +1,5 @@
 from pybricks.hubs import PrimeHub
-from robot import drive_base
+from robot import drive
 from robot import hub
 from pybricks.robotics import DriveBase
 from pybricks.parameters import Stop, Color, Button
@@ -67,4 +67,4 @@ def track_movement(drive_base: DriveBase, hub: PrimeHub, drive_base_name: str = 
                 else:
                     print(f"{drive_base_name}.straight({actions[i][1]}{suffix})")
             break
-run_task(track_movement(drive_base, hub))
+run_task(track_movement(drive, hub))

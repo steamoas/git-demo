@@ -6,7 +6,8 @@ from pybricks.parameters import Button, Port, Direction
 hub = PrimeHub()
 #Adjust these parameters to fit your robot. Also ensure that you add any sensors here.
 
-left_drive = Motor(Port.C, Direction.COUNTERCLOCKWISE)
-right_drive = Motor(Port.A, Direction.CLOCKWISE)
+left_drive = Motor(Port.F, Direction.COUNTERCLOCKWISE)
+right_drive = Motor(Port.E, Direction.CLOCKWISE)
 
-drive = DriveBase(left_drive, right_drive, 50, 100)
+drive = DriveBase(left_drive, right_drive, 56, 96)
+drive.use_gyro(True)
