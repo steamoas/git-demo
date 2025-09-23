@@ -46,7 +46,7 @@ def track_movement(drive_base: DriveBase, hub: PrimeHub, drive_base_name: str = 
             end_angle = drive_base.angle()
             end_distance = drive_base.distance()
 
-            if end_angle * 10 > end_distance:
+            if abs(end_angle * 10) > abs(end_distance):
                 actions.append((0, end_angle))
                 print(f"{actions_count}: turn {end_angle} degrees")
             else:
