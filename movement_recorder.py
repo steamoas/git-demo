@@ -64,10 +64,11 @@ def track_movement(drive_base: DriveBase, hub: PrimeHub, drive_base_name: str = 
                     print(f"{actions_count}: drive {end_distance} mm")
 
             elif mode == "curve":
-                circumference = end_distance * (360 / end_angle)
-                radius = sqrt(circumference/pi)
-                actions.append((2, radius, end_distance))
-                print(f"{actions_count}: curve with a radius of {radius} of {end_angle} degrees")
+                circumference = end_distance * (360 / abs(end_angle))
+                radius = circumference/(pi * 2)
+
+                actions.append((2, radius, end_angle))
+                print(f"{actions_count}: curve with a radius of {radius} for {end_angle} degrees")
 
             actions_count += 1
             hub.light.on(Color.GREEN)
@@ -83,7 +84,7 @@ def track_movement(drive_base: DriveBase, hub: PrimeHub, drive_base_name: str = 
                 elif actions[i][0] == 1:
                     print(f"{drive_base_name}.straight({actions[i][1]}{suffix})")
                 elif actions[i][0] == 2:
-                    print(f"{drive_base_name}.curve({actions[i][1]}, {actions[i][2]}{suffix})")
+                    print(f"{drive_base_name}.curve({round(actions[i][1], rounding_digits)}, {round(actions[i][2], rounding_digits)}{suffix})")
             break
 
         elif Button.LEFT in buttons:
