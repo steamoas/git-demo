@@ -5,6 +5,7 @@ from pybricks.parameters import Button, Port, Direction
 
 hub = PrimeHub()
 #Adjust these parameters to fit your robot. Also ensure that you add any sensors here.
+#David's Robot
 
 left_drive = Motor(Port.D, Direction.COUNTERCLOCKWISE)
 right_drive = Motor(Port.F, Direction.CLOCKWISE)
